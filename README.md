@@ -10,8 +10,8 @@ Tested on an **NVIDIA T4 GPU** (Batch Size: 32, 200 execution passes after 50 wa
 
 | Execution Mode | Precision | Batch Size | Latency (ms) | Throughput (QPS) | Latency Reduction | Speedup |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **PyTorch Baseline** | FP32 | 32 | 35.79 ms | 894.1 QPS | Baseline | 1.00x |
-| **Quantized / Tensor Core** | **FP16** | **32** | **17.24 ms** | **1,855.7 QPS** | **-51.8%** | **2.08x** |
+| **PyTorch Baseline** | FP32 | 32 | 33.74 ms | 948.5 QPS | Baseline | 1.00x |
+| **Quantized / Tensor Core** | **FP16** | **32** | **16.21 ms** | **1,973.9 QPS** | **-51.9%** | **2.08x** |
 
 ## Key Technical Steps
 
