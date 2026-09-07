@@ -6,12 +6,12 @@ Standard FP32 PyTorch models are often bottlenecked by VRAM bandwidth during rea
 
 ## Benchmark Results
 
-Tested on an **NVIDIA T4 GPU** across 200 execution passes (after 50 warmup runs) using CUDA timing events:
+Tested on an **NVIDIA T4 GPU** (Batch Size: 32, 200 execution passes after 50 warmup runs):
 
-| Execution Mode | Precision | Latency | Throughput | Speedup |
-| :--- | :--- | :--- | :--- | :--- |
-| PyTorch Baseline | FP32 | 6.16 ms | 162.3 QPS | 1.00x |
-| **Quantized / Tensor Core** | **FP16** | **3.11 ms** | **321.3 QPS** | **1.98x** |
+| Execution Mode | Precision | Batch Size | Latency (ms) | Throughput (QPS) | Latency Reduction | Speedup |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **PyTorch Baseline** | FP32 | 32 | 35.79 ms | 894.1 QPS | Baseline | 1.00x |
+| **Quantized / Tensor Core** | **FP16** | **32** | **17.24 ms** | **1,855.7 QPS** | **-51.8%** | **2.08x** |
 
 ## Key Technical Steps
 
